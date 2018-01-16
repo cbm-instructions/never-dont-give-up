@@ -1,4 +1,4 @@
-# Digital Chair
+# Seat UP
 
 Ein interaktiver Stuhl, dessen Sensoren dabei helfen die Sitzhaltung im Büroalltag nachhaltig zu verbessern.
 
@@ -9,8 +9,8 @@ Ein interaktiver Stuhl, dessen Sensoren dabei helfen die Sitzhaltung im Büroall
 
 Viele kennen es. Ständig klagt der Kollege aus dem Büro über Rückenschmerzen, der Tischnachbar über schmerzende Augen oder man selbst hat wieder einen steifen Hals.
 Genau dieses Problem soll von nun an behaldelt werden, und das ganz ohne einen Arztbesuch.
-Der Seat UP erinnert den Nutzer bei falscher Sitzhaltung via Vibration, sich wieder richtig hinzusetzen. Dabei messen Sensoren an kritischen Punkten den Kontakt zum Stuhl. Sitzt man falsch,
- sieht der Nutzer auf der LED Anzeige, was aktuell falsch ist. Zusätzlich sieht er eine handgemalte Zeichnung zur Erinnerung an die richtige Haltung auf dem Stuhl.
+Der Seat UP erinnert den Nutzer bei falscher Sitzhaltung via Vibration, sich wieder richtig hinzusetzen. Dabei messen Sensoren an kritischen Punkten den Kontakt zum Stuhl. 
+Die verschiedenen Messpunkte werden dem Nutzer in der linken Armlehne angezeigt. Symbolisiert werden die Druckpunkte durch fünf LEDs, die jeweils in zwei verschiedenen Farben leuchten können. 
 
 ### Material und Werkzeug
 
@@ -77,27 +77,28 @@ Sicherheitshalber haben wir die Kabel noch mit Isolierband abgetrennt.
 
 <img src="pictures/force___flex_fsrpulldowndia.png" height="300">
 
-Nachdem wir mit einem Schraubbohrer in das Polster zwei Löcher mit ca. 5mm Durchmesser gemacht haben, konnten wir den Sensor mit einer Schnur befestigen.
+Nachdem wir mit einem Schraubbohrer in das Polster zwei Löcher mit ca. 5mm Durchmesser gebohrt haben, konnten wir den Sensor mit einer Schnur befestigen.
 
 <img src="pictures/stuhl5.jpg" height="300">
 
-Nach einem kurzen Testlauf mussten wir festestellen, dass die Sensoren durch den Schaumstoff nicht richtig betätigt wurden. Daher fertigten wir aus Kork und Pappe eine kleine Schablone, die dem eine größere Liegefläche bietet und somit viel besser geeignet war für die Sensoren.
+Nach einem kurzen Testlauf mussten wir festestellen, dass die Sensoren durch den Schaumstoff nicht richtig betätigt wurden. Daher fertigten wir aus Kork und Pappe kleine Druckplatten, welche dazu dienen sollte die Druckfläche der einzelnen Sensoren zu vergrößern.
 
 <img src="pictures/stuhl6.jpeg" height="300">
 
-Selbiges haben wir dann mit dem Sitzpolster des Stuhles gemacht. Die Sensoren haben wir so gewähnt, dass sie Kontakt mit dem Glutes und den Oberschenkeln haben.
+Für die Sitzfläche haben wir ingesamt 4 Drucksensoren verbaut. Zusammen mut zwei Sensoren für den oberen Rücken und einem für den unteren Rücken haben wir insgemsamt 7 Drucksensoren im Stuhl angebracht.
 
 <img src="pictures/stuhl7.jpeg" height="300">
 
-Als letztes haben wir noch aus einem Korken einen kleinen Würfel geschnitten und ein passendes Loch für unseren Vibrationsmotor gebohrt.
+Den Stuhl lassen wir mithilfe eines kleinen Vibrationsmotors vibrieren. Diesen haben wir in Kork eingepackt um ihn vor dem Schaumstoff des Stuhls zu schützen und einen reibungsfreihen Ablauf zu gewährleisten. 
 
 <img src="pictures/motor1.jpeg" height="300">
 
-Im Anschluss wurde dieser mit einfachem Isoliertape verbunden und zwischen dem rechten Oberschenkel und Gluteussensor verlegt.
+Im Anschluss wurde dieser mit einfachem Isoliertape verbunden und zwischen dem rechten Oberschenkel und Po verlegt.
 
 <img src="pictures/motor2.jpeg" height="300">
 
-Der Vibrationsmotor funktioniert an sich, wenn man beide Kabel richtig verbindet (rot and 3.3V, blau an ground). Jedoch wollten wir die Vibration über einen Pin steuern können, deshalb haben wir dazu einen Transistor verwendet. Der Transistor ist hierbei notwendig, da unser Vibrationsmotor, obwohl er auf LOW liegt, eine Störspannung von den Piranha LEDs empfängt. Dazu wurde der Vibrationsmotor mit dem Transistor wie folgt verbunden:
+Unser Vibrationsmotor wird über zwei Kabel betrieben. Über das rote Kabel läuft eine Spannung (3,3V). Das schwarze Kabel mündet im Ground.
+Um den Vibrationsmotor manuell steuern zu können, mussten wir zusätzlich noch einen Transistor verbauen (siehe Abb. unten).
 
 <img src="pictures/trans.png" height="400">
 
@@ -110,17 +111,17 @@ Ursprünglich sollte der Ultraschall so platziert werden, um nur den Abstand zum
 
 <img src="pictures/uss.jpg" height="300">
 
-Verlötet wurde der Ultraschallsensor mit vier Schaltlitzen. Ein Schaltbild finden Sie hier:
+Verlötet wurde der Ultraschallsensor mit vier Schaltlitzen. Betrieben wird er mit einer 5V Spannung. Desweiteren benötigt man noch zwei Kabel für TRIGGER und ECHO. Der TRIGGER dient als Output-Signal aus dem Arduino und ECHO ist das Input-Signal welches den Messwert von Ultraschallsensor an den Arduino sendet. Das vierte Kabel mündet in den Ground.
 
-<img src="pictures/Ultrasonic-Sensor-Cirucit-Schematics-04.png" height="300">
+<img src="pictures/Ultrasonic-Sensor-Cirucit-Schematics-04.png" height="500">
 
-Nachdem wir die richtige Position gefunden haben, haben wir zunächst einen rechteckigen Bereich markiert. Es wurden daraufhin zwei Löcher gebohrt, indem wir den Ultraschallsensor legen konnten. Danach wurde der Ultraschallsensor mit einer Schnur an das Brett der Kopflehne befestigt.
+Nachdem wir die richtige Position gefunden haben, haben wir zunächst einen rechteckigen Bereich markiert. Es wurden daraufhin zwei Löcher gebohrt, in den wir den Ultraschallsensor legen konnten. Danach wurde der Ultraschallsensor mit einer Schnur an das Brett der Kopflehne befestigt.
 
 Rückseite             |  Vorderseite
 :-------------------------:|:-------------------------:
 <img src="pictures/uss1.jpeg" height="300">  |  <img src="pictures/uss2.jpeg" height="300">
 
-Als letzten Schritt mussten wir zwei Löcher in den Überzug der Kopflehne für den Sender und Empfänger machen. Diesen wurden mit Abtasten herausgefunden. Die Löcher wurden zunächst klein gemacht, und dann wenn nötig, vergrößert. Nun ist der Ultraschallsensor verbaut und es sieht folgendermaßen aus:
+Als letzten Schritt mussten wir zwei Löcher in den Überzug der Kopflehne für den Sender und Empfänger machen. Diesen wurden mit Abtasten herausgefunden. Die Löcher wurden zunächst klein gemacht, und dann wenn nötig, vergrößert. Damit sich das Polster nicht über die beiden Zylinder zieht, haben wir diesen an den Ultraschallsensor geklebt. Nun ist der Ultraschallsensor verbaut und es sieht folgendermaßen aus:
 
 <img src="pictures/uss4.jpeg" height="300"> <img src="pictures/uss5.jpeg" height="300">
 
@@ -132,11 +133,12 @@ Dabei benötigt der Pin jeder Kante einen eigenen 330 Ohm Widerstand.
 
 <img src="pictures/pir1.jpeg" height="300">
 
-Die Piranha LEDs funktionieren anders als „normale“ LEDs, denn sie werden umgekehrt geschaltet (LOW = an, HIGH = aus). Nachdem alles verlötet und angeschlossen wurde, haben wir einen kleinen Testlauf gemacht, um zu sehen, ob alles richtig funktioniert:
+Piranha LEDs leuchten in drei Farben (R,G,B). Für jede der drei Farben gibt es einen Ausgang. Um eine Farbe oder eine Mischung aus verschiedenen Farben zu erhalten, müssen die jeweiligen Ausgänge der LEDs auf "LOW" geschaltet werden. Wir betreiben die Piranha LEDs mit 3,3V, da sie bei 5V zu hell leuchten würden.
+Nachdem alles miteinander verlötet und angeschlossen wurde, haben wir einen kleinen Testlauf gemacht, um zu sehen, ob alles richtig funktioniert:
 
 <img src="pictures/pir2.jpeg" height="300">
 
-Als letzten Schritt für die LEDs mussten wir sie nun in die Armlehne bringen. Wie vorhin schon erwähnt wurden hier die einzelnen Tacker entfernt und das Polster von der Armlehne getrennt. Nachdem die korrekte Position auf dem Schaumstoff gefunden wurde, haben wir sie zunächst markiert, indem wir unsere Platine darauf gepresst haben.
+Der nächste Schritt war es die Platine mit den LEDs in der Armlehne zu verbauen. Wie vorhin schon erwähnt wurden hier die einzelnen Tacker entfernt und das Polster von der Armlehne getrennt. Nachdem die korrekte Position auf dem Schaumstoff gefunden wurde, haben wir sie zunächst markiert, indem wir unsere Platine mit den LEDs darauf gepresst haben.
 
 <img src="pictures/arm.jpg" height="300">
 
@@ -144,8 +146,8 @@ Ein kleiner Bereich davon wurde ausgeschnitten, damit wir die Kabel der Platine 
 
 <img src="pictures/arm1.jpg" height="300">
 
-Der pinke Überzug wurde dann mit Punkten markiert, wo sich die LEDs befinden. Diese Punkte wurden dann vorsichtig aufgeschnitten, sodass die LEDs durchleuchten können.
-Da sich der pinke Überzug auch noch leicht verschiebbar war, haben wir diesen ebenso mit Tape befestigt.
+Der pinke Überzug wurde dann mit Punkten markiert, welche die Position der LEDs markieren sollen. Diese Punkte wurden dann vorsichtig aufgeschnitten, sodass wir die LEDs durchstecken konnten.
+Damit sich der Schaumstoff später nicht über die LEDs schiebt haben wir diesen mit Tape befestigt.
 
 <img src="pictures/arm2.jpg" height="300">
 
