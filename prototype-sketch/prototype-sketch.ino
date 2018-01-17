@@ -64,6 +64,104 @@ void setup(void) {
   //Ultrasonicsensor
   pinMode(echo, INPUT);
   pinMode(trigger, OUTPUT);
+  turnAllOff();
+  startDemo();
+  startSeatUP();
+}
+
+void startDemo(){
+  for(int i = 0; i < 3; i++){
+    turnGreen(LEDLeg);
+    turnOff();
+    turnGreen(LEDButt);
+    turnOff();
+    turnGreen(LEDLowerBack);
+    turnOff();
+    turnGreen(LEDUpperBack);
+    turnOff();
+    turnGreen(LEDHead);
+    turnOff();
+  }
+}
+
+void turnGreen(int pin){
+  digitalWrite(pin, HIGH);
+  digitalWrite(pin + 2, LOW);
+  digitalWrite(pin + 4, HIGH);
+  delay(75);
+}
+
+void turnAllOff(){
+  digitalWrite(LEDLeg, HIGH);
+  digitalWrite(LEDButt, HIGH);  
+  digitalWrite(LEDLowerBack, HIGH);
+  digitalWrite(LEDUpperBack, HIGH);
+  digitalWrite(LEDHead, HIGH);
+  digitalWrite(LEDLeg+2, HIGH);
+  digitalWrite(LEDButt+2, HIGH);  
+  digitalWrite(LEDLowerBack+2, HIGH);
+  digitalWrite(LEDUpperBack+2, HIGH);
+  digitalWrite(LEDHead+2, HIGH);
+  digitalWrite(LEDLeg+4, HIGH);
+  digitalWrite(LEDButt+4, HIGH);  
+  digitalWrite(LEDLowerBack+4, HIGH);
+  digitalWrite(LEDUpperBack+4, HIGH);
+  digitalWrite(LEDHead+4, HIGH);  
+}
+
+void turnOff(){
+  digitalWrite(LEDLeg+2, HIGH);
+  digitalWrite(LEDButt+2, HIGH);  
+  digitalWrite(LEDLowerBack+2, HIGH);
+  digitalWrite(LEDUpperBack+2, HIGH);
+  digitalWrite(LEDHead+2, HIGH);
+  delay(75);
+}
+
+void startSeatUP(){
+  digitalWrite(LEDLeg+2, HIGH);
+  digitalWrite(LEDButt+2, HIGH);  
+  digitalWrite(LEDLowerBack+2, HIGH);
+  digitalWrite(LEDUpperBack+2, HIGH);
+  digitalWrite(LEDHead+2, HIGH);
+  delay(125);
+  digitalWrite(LEDLeg+2, LOW);
+  digitalWrite(LEDButt+2, LOW);  
+  digitalWrite(LEDLowerBack+2, LOW);
+  digitalWrite(LEDUpperBack+2, LOW);
+  digitalWrite(LEDHead+2, LOW);
+  delay(125);
+  digitalWrite(LEDLeg+2, HIGH);
+  digitalWrite(LEDButt+2, HIGH);  
+  digitalWrite(LEDLowerBack+2, HIGH);
+  digitalWrite(LEDUpperBack+2, HIGH);
+  digitalWrite(LEDHead+2, HIGH);
+  delay(125);
+  digitalWrite(LEDLeg+2, LOW);
+  digitalWrite(LEDButt+2, LOW);  
+  digitalWrite(LEDLowerBack+2, LOW);
+  digitalWrite(LEDUpperBack+2, LOW);
+  digitalWrite(LEDHead+2, LOW);
+  delay(125);
+  digitalWrite(LEDLeg+2, HIGH);
+  digitalWrite(LEDButt+2, HIGH);  
+  digitalWrite(LEDLowerBack+2, HIGH);
+  digitalWrite(LEDUpperBack+2, HIGH);
+  digitalWrite(LEDHead+2, HIGH);
+  delay(125);
+  digitalWrite(LEDLeg+2, LOW);
+  digitalWrite(LEDButt+2, LOW);  
+  digitalWrite(LEDLowerBack+2, LOW);
+  digitalWrite(LEDUpperBack+2, LOW);
+  digitalWrite(LEDHead+2, LOW);
+  delay(125);
+  digitalWrite(LEDLeg+2, HIGH);
+  digitalWrite(LEDButt+2, HIGH);  
+  digitalWrite(LEDLowerBack+2, HIGH);
+  digitalWrite(LEDUpperBack+2, HIGH);
+  digitalWrite(LEDHead+2, HIGH);
+  delay(500);
+  turnAllOff(); 
 }
 
 void triggerVibration() {
@@ -80,7 +178,7 @@ bool getUSSState(int array[], int pin){
   bool state = true;
 
   for(int i = 0; i < 10; i++){
-    if(array[i] < 0){
+    if(array[i] < 0 || array[i] > 15){
       state = false;
     }
   }
