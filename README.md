@@ -50,7 +50,7 @@ Folgende Werkzeuge werden für den Bau des Stuhls benötigt:
 
 Um ein Programm für den Arduino zu schreiben bzw. um es darauf zu überspielen bietet sich die von Arduino selbst bereitgestellte IDE an. Zwar bietet diese nur eine sehr limitierte Funktionalität an, für unsere Zwecke ist das aber durchaus ausreichend. Die IDE kann [hier](https://www.arduino.cc/en/main/software) heruntergeladen werden.
 
-##Step-by-step Guide
+## Step-by-step Guide
 
 # 1. Stuhl demontieren
 Zunächst wird der Stuhl benötigt.
