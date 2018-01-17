@@ -3,7 +3,7 @@
 Ein interaktiver Stuhl, dessen Sensoren dabei helfen die Sitzhaltung im Büroalltag nachhaltig zu verbessern.
 
 
-<img src="pictures/stuhl1.jpg" height="300">
+<img src="pictures/final2.jpeg" height="300"> <img src="pictures/final.jpeg" height="300">
 
 ## Einleitung
 
