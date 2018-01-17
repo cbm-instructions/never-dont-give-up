@@ -155,11 +155,9 @@ Als letzten Schritt haben wir es wieder verpackt und die einzelne Bereiche, in d
 
 <img src="pictures/arm3.jpeg" height="300">
 
-# 5. Das Produkt
+# 5. Code
 
-Nachdem alle einzelnen Teile wieder zusammen verbaut wurden, sieht das finale Produkt folgendermaßen aus:
-
-<img src="pictures/StuhlFertig.jpeg" height="300">
+[Hier](https://github.com/cbm-instructions/never-dont-give-up/tree/master/prototype-sketch) geht es zum Code.
 
 # 6. Zukunftsaussichten
 
