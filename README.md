@@ -163,8 +163,7 @@ Als letzten Schritt haben wir es wieder verpackt und die einzelne Bereiche, in d
 
 Ursprünglich sollte noch ein Waveshare E-Ink Display in dem Stuhl seinen Platz finden und eine wöchentliche Ansicht über die korrekte Sitzhaltung anzeigen.
 Dafür wurde die verlinkte Bibliothek etwas umgeschrieben, weil das Display jeweils schwarze und rote Sketches malt.
-Zusätzlich muss man ein Bild in einem Bildeditor der Wahl nach dem Maßen 128x296 Pixeln anfertigen, als .bmp abspeichern und im Programm IMG2LCD zu einem Array konvertieren, welches vom Arduino eingelesen wird. 
-Dies muss in den PROGMEM gespeichert werden. Hätten wir bloß eine Person mehr in unserem Team, wäre uns das auch sicher gelungen :)
+Zusätzlich muss man ein Bild in einem Bildeditor der Wahl nach dem Maßen 128x296 Pixeln anfertigen, als .bmp abspeichern und im Programm IMG2LCD zu einem Array konvertieren, welches vom Arduino eingelesen wird. Dies muss in den PROGMEM gespeichert werden.
 
 <img src="pictures/dia.bmp" height="300"> | <img src="pictures/eink.jpg" height="300">
 
